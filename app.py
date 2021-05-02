@@ -6,7 +6,7 @@ app = Flask(__name__)
 # /// = relative path, //// = absolute path
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SECRET_KEY'] = '172f64ded4c61bea7642e3eac02b32cb'
+app.config['SECRET_KEY'] = 'put secret key here'
 db = SQLAlchemy(app)
 
 
