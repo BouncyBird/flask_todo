@@ -3,22 +3,8 @@ from datetime import timedelta
 
 app = Flask(__name__)
 
-<<<<<<< HEAD
 app.config['SECRET_KEY'] = '172f64ded4c61bea7642e3eac02b32cb'
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=500)
-=======
-# /// = relative path, //// = absolute path
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SECRET_KEY'] = 'put secret key here'
-db = SQLAlchemy(app)
-
-
-class Todo(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(100))
-    complete = db.Column(db.Boolean)
->>>>>>> 39ed2190200197021911ff6c32d116ccd27ce452
 
 
 @app.route('/')
@@ -61,9 +47,4 @@ def delete(todo_id):
     return redirect(url_for("home"))
 
 if __name__ == "__main__":
-<<<<<<< HEAD
     app.run(debug=False)
-=======
-    db.create_all()
-    app.run(debug=True)
->>>>>>> 39ed2190200197021911ff6c32d116ccd27ce452

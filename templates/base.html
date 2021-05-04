@@ -23,6 +23,7 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css">
 </head>
 
 <body>
@@ -74,6 +75,16 @@
         </div>
         {% endfor %}
     </div>
+
+    <div class="alert text-center cookiealert" role="alert">
+        <b>Cookie Alert</b> &#x1F36A; Our site requires cookies, because that is how we store your tasks
+
+        <button type="button" class="btn btn-primary btn-sm acceptcookies">
+            I understand
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.js"></script>
 </body>
 
 </html>
