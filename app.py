@@ -4,7 +4,7 @@ from datetime import timedelta
 app = Flask(__name__)
 
 <<<<<<< HEAD
-app.config['SECRET_KEY'] = '172f64ded4c61bea7642e3eac02b32cb'
+app.config['SECRET_KEY'] = 'secret'
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=500)
 =======
 # /// = relative path, //// = absolute path
