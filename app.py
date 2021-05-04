@@ -43,7 +43,7 @@ def update(todo_id):
 @app.route("/delete/<int:todo_id>")
 def delete(todo_id):
     session['tasks'].pop(todo_id)
-    flash("Task Delete!", "danger")
+    flash("Task Deleted!", "danger")
     return redirect(url_for("home"))
 
 if __name__ == "__main__":
