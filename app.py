@@ -37,11 +37,13 @@ def add():
 def update(todo_id):
     d = session['tasks'][todo_id]
     d['complete'] = not d['complete']
+    flash("Task Updated!", "success")
     return redirect(url_for("home"))
 
 @app.route("/delete/<int:todo_id>")
 def delete(todo_id):
     session['tasks'].pop(todo_id)
+    flash("Task Delete!", "danger")
     return redirect(url_for("home"))
 
 if __name__ == "__main__":
